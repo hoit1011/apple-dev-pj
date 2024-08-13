@@ -24,6 +24,22 @@ struct VoteResultView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(height: 120)
                     .padding(.top,20)
+                
+                Spacer()
+                    .frame(height: 80)
+                Button(
+                    action:{globalState.FreeTime = nil;
+                        globalState.StudyTime = nil},
+                    label:{
+                        Text("다시 투표하러 가기")
+                            .padding(.horizontal,60)
+                            .padding(.vertical,15)
+                            .foregroundColor(.white)
+                            .background(.blue)
+                            .cornerRadius(20)
+                            .font(.system(size: 20,weight: .bold))
+                    }
+                )
             }
         }
         .ignoresSafeArea()
@@ -32,7 +48,7 @@ struct VoteResultView: View {
 
 private struct TitleView:View {
     fileprivate var body: some View{
-        Text("오늘의 투표결과!")
+        Text("오늘의 선택결과!")
             .font(.system(size: 30,weight: .bold))
             .foregroundStyle(.black)
     }

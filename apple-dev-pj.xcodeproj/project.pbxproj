@@ -25,6 +25,10 @@
 		BE044F2B2C6B7DA700BE7701 /* VoteResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE044F2A2C6B7DA700BE7701 /* VoteResultView.swift */; };
 		BE044F312C6B815F00BE7701 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE044F302C6B815F00BE7701 /* TimerView.swift */; };
 		BE044F332C6B816A00BE7701 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE044F322C6B816A00BE7701 /* TimerViewModel.swift */; };
+		BE3B94AC2C6BD4C1004E8BD7 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3B94AB2C6BD4C1004E8BD7 /* Time.swift */; };
+		BE3B94AF2C6BDA6A004E8BD7 /* ComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3B94AE2C6BDA6A004E8BD7 /* ComponentView.swift */; };
+		BE3B94B42C6BE007004E8BD7 /* NoVoteTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3B94B32C6BE007004E8BD7 /* NoVoteTimerView.swift */; };
+		BE3B94B62C6BE3CE004E8BD7 /* TimerSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3B94B52C6BE3CE004E8BD7 /* TimerSettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,10 @@
 		BE044F2A2C6B7DA700BE7701 /* VoteResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteResultView.swift; sourceTree = "<group>"; };
 		BE044F302C6B815F00BE7701 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		BE044F322C6B816A00BE7701 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		BE3B94AB2C6BD4C1004E8BD7 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		BE3B94AE2C6BDA6A004E8BD7 /* ComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentView.swift; sourceTree = "<group>"; };
+		BE3B94B32C6BE007004E8BD7 /* NoVoteTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoVoteTimerView.swift; sourceTree = "<group>"; };
+		BE3B94B52C6BE3CE004E8BD7 /* TimerSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +124,8 @@
 		BE044EEA2C6B7BEF00BE7701 /* apple-dev-pj */ = {
 			isa = PBXGroup;
 			children = (
+				BE3B94AD2C6BDA5C004E8BD7 /* Component */,
+				BE3B94AA2C6BD4B7004E8BD7 /* Model */,
 				BE044F182C6B7C4F00BE7701 /* Feature */,
 				BE044EEB2C6B7BEF00BE7701 /* apple_dev_pjApp.swift */,
 				BE044EED2C6B7BEF00BE7701 /* ContentView.swift */,
@@ -153,7 +163,8 @@
 		BE044F182C6B7C4F00BE7701 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				BE044F2C2C6B813600BE7701 /* TimerView */,
+				BE3B94B22C6BDFBF004E8BD7 /* NoVoteTimer */,
+				BE044F2C2C6B813600BE7701 /* Timer */,
 				BE044F252C6B7CE200BE7701 /* Picker */,
 				BE044F202C6B7CA600BE7701 /* StudyTimePicker */,
 				BE044F192C6B7C5A00BE7701 /* Onbording */,
@@ -190,13 +201,38 @@
 			path = Picker;
 			sourceTree = "<group>";
 		};
-		BE044F2C2C6B813600BE7701 /* TimerView */ = {
+		BE044F2C2C6B813600BE7701 /* Timer */ = {
 			isa = PBXGroup;
 			children = (
 				BE044F302C6B815F00BE7701 /* TimerView.swift */,
 				BE044F322C6B816A00BE7701 /* TimerViewModel.swift */,
+				BE3B94B52C6BE3CE004E8BD7 /* TimerSettingView.swift */,
 			);
-			path = TimerView;
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		BE3B94AA2C6BD4B7004E8BD7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE3B94AB2C6BD4C1004E8BD7 /* Time.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE3B94AD2C6BDA5C004E8BD7 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				BE3B94AE2C6BDA6A004E8BD7 /* ComponentView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		BE3B94B22C6BDFBF004E8BD7 /* NoVoteTimer */ = {
+			isa = PBXGroup;
+			children = (
+				BE3B94B32C6BE007004E8BD7 /* NoVoteTimerView.swift */,
+			);
+			path = NoVoteTimer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,12 +377,16 @@
 				BE044F292C6B7D0300BE7701 /* PickerView.swift in Sources */,
 				BE044F332C6B816A00BE7701 /* TimerViewModel.swift in Sources */,
 				BE044F272C6B7CF200BE7701 /* PickerViewModel.swift in Sources */,
+				BE3B94AC2C6BD4C1004E8BD7 /* Time.swift in Sources */,
 				BE044F1F2C6B7C9800BE7701 /* StartView.swift in Sources */,
 				BE044F312C6B815F00BE7701 /* TimerView.swift in Sources */,
 				BE044F1D2C6B7C7F00BE7701 /* OnbordingViewModel.swift in Sources */,
+				BE3B94AF2C6BDA6A004E8BD7 /* ComponentView.swift in Sources */,
+				BE3B94B62C6BE3CE004E8BD7 /* TimerSettingView.swift in Sources */,
 				BE044EEC2C6B7BEF00BE7701 /* apple_dev_pjApp.swift in Sources */,
 				BE044F1B2C6B7C6A00BE7701 /* OnbordingView.swift in Sources */,
 				BE044F222C6B7CBD00BE7701 /* StudyTimePickerView.swift in Sources */,
+				BE3B94B42C6BE007004E8BD7 /* NoVoteTimerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,8 +11,6 @@ struct PickerView: View {
     @EnvironmentObject var pickerViewModel : PickerViewModel
     
     var body: some View {
-        ZStack{
-//            Color(.customBlue)
             VStack{
                 TitleView()
                 
@@ -38,8 +36,6 @@ struct PickerView: View {
             ) {
                 Button("확인",role: .cancel) { }
             }
-        }
-        .ignoresSafeArea()
     }
 }
 
@@ -99,13 +95,7 @@ private struct VotingView: View {
                 globalState.FreeTime = pickerViewModel.selectedButtonIndex
             },
             label:{
-                Text("투표하기")
-                    .padding(.horizontal,125)
-                    .padding(.vertical,15)
-                    .foregroundColor(.white)
-                    .background(.blue)
-                    .cornerRadius(20)
-                    .font(.system(size: 20,weight: .bold))
+                CustomButtonView(message: "투표하기")
             }
         )
     }

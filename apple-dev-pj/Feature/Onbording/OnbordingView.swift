@@ -1,48 +1,56 @@
-//
-//  OnbordingView.swift
-//
-//  Created by FND_02 on 8/13/24.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 
 struct OnbordingView: View {
-    @State var selection:Int = 0
-    @EnvironmentObject var pickerViewModel : PickerViewModel
+    @State var selection: Int = 0
+    @EnvironmentObject var pickerViewModel: PickerViewModel
     @EnvironmentObject var globalState: GlobalState
+    
     var body: some View {
-        TabView(selection: $selection){
-            if globalState.StudyTime == nil{
+        TabView(selection: $selection) {
+            if globalState.StudyTime == nil {
                 StudyTimePickerView()
                     .environmentObject(StudyTimePickerViewModel())
                     .tabItem {
                         Image(systemName: "archivebox")
-                            .foregroundColor(.white)
                     }
-            } else if globalState.FreeTime == nil{
+                    .tag(0)
+            } else if globalState.FreeTime == nil {
                 PickerView()
                     .environmentObject(PickerViewModel())
                     .tabItem {
                         Image(systemName: "archivebox")
-                            .foregroundColor(.white)
                     }
+                    .tag(1)
             } else {
                 VoteResultView()
                     .environmentObject(globalState)
                     .tabItem {
                         Image(systemName: "archivebox")
-                            .foregroundColor(.white)
-                }
+                    }
+                    .tag(2)
             }
-            Text("timer")
-                .tabItem {
-                    Image(systemName: "timer")
-                }
+            
+            if globalState.FreeTime == nil || globalState.StudyTime == nil {
+                NoVoteTimerView(selection: $selection)
+                    .tabItem {
+                        Image(systemName: "timer")
+                    }
+                    .tag(3)
+            } else {
+                TimerSettingView()
+                    .environmentObject(globalState)
+                    .tabItem {
+                        Image(systemName: "timer")
+                    }
+                    .tag(3)
+            }
+            
             Text("v")
                 .tabItem {
                     Image(systemName: "highlighter")
                 }
+                .tag(4)
         }
         .accentColor(.black)
         .navigationBarBackButtonHidden()
@@ -54,5 +62,5 @@ struct OnbordingView: View {
         .environmentObject(PickerViewModel())
         .environmentObject(StudyTimePickerViewModel())
         .environmentObject(GlobalState())
-
+        .environmentObject(TimerViewModel())
 }
