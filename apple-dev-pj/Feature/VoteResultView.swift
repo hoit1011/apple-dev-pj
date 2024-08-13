@@ -11,7 +11,6 @@ struct VoteResultView: View {
     @EnvironmentObject private var globalState: GlobalState
     var body: some View {
         ZStack{
-            Color.customBlue
             VStack{
                 TitleView()
                 
@@ -35,7 +34,7 @@ private struct TitleView:View {
     fileprivate var body: some View{
         Text("오늘의 투표결과!")
             .font(.system(size: 30,weight: .bold))
-            .foregroundStyle(.white)
+            .foregroundStyle(.black)
     }
 }
 
@@ -48,7 +47,7 @@ private struct VoteResultContentView: View {
             Text("휴식:\(globalState.FreeTime ?? 0)분")
         }
         .font(.system(size: 30,weight: .bold))
-        .foregroundColor(.white)
+        .foregroundColor(.black)
         .monospaced()
     }
 }

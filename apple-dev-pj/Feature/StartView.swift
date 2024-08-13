@@ -45,4 +45,7 @@ struct StartView: View {
 
 #Preview {
     StartView()
+        .environmentObject(PickerViewModel())
+        .environmentObject(StudyTimePickerViewModel())
+        .environmentObject(GlobalState())
 }

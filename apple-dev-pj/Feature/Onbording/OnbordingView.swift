@@ -33,7 +33,7 @@ struct OnbordingView: View {
                     .tabItem {
                         Image(systemName: "archivebox")
                             .foregroundColor(.white)
-                    }
+                }
             }
             Text("timer")
                 .tabItem {
@@ -44,7 +44,7 @@ struct OnbordingView: View {
                     Image(systemName: "highlighter")
                 }
         }
-        .accentColor(.white)
+        .accentColor(.black)
         .navigationBarBackButtonHidden()
     }
 }

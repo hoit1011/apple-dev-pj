@@ -12,7 +12,7 @@ struct PickerView: View {
     
     var body: some View {
         ZStack{
-            Color(.customBlue)
+//            Color(.customBlue)
             VStack{
                 TitleView()
                 
@@ -48,7 +48,7 @@ private struct TitleView: View {
     fileprivate var body: some View{
         Text("오늘의 휴식시간을 골라 주세요")
             .font(.system(size: 26,weight: .bold))
-            .foregroundStyle(.white)
+            .foregroundStyle(.black)
     }
 }
 
@@ -62,7 +62,7 @@ private struct PickerContentView: View {
                 VStack{
                     Text("\(picker*5)분")
                         .padding(.horizontal,10)
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                     Button(
                         action:{
                             pickerViewModel.selectedBtnTapped(number: picker * 5)
@@ -71,11 +71,15 @@ private struct PickerContentView: View {
                             if(picker * 5 == pickerViewModel.selectedButtonIndex){
                                 Image("selectedBox")
                                     .resizable()
+                                    .renderingMode(.template)
                                     .frame(width: 30,height: 30)
+                                    .foregroundColor(.black)
                             }else{
                                 Image("unSelectedBox")
                                     .resizable()
+                                    .renderingMode(.template)
                                     .frame(width: 25,height: 25)
+                                    .foregroundColor(.black)
                             }
                         }
                     )
@@ -96,12 +100,12 @@ private struct VotingView: View {
             },
             label:{
                 Text("투표하기")
-                    .padding(.horizontal,100)
-                    .padding(.vertical,10)
-                    .foregroundColor(.customBlue)
-                    .background(Color.white)
-                    .cornerRadius(10)
-                    .font(.system(size: 20,weight: .medium))
+                    .padding(.horizontal,125)
+                    .padding(.vertical,15)
+                    .foregroundColor(.white)
+                    .background(.blue)
+                    .cornerRadius(20)
+                    .font(.system(size: 20,weight: .bold))
             }
         )
     }

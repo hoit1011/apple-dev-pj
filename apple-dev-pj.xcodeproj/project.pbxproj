@@ -23,6 +23,8 @@
 		BE044F272C6B7CF200BE7701 /* PickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE044F262C6B7CF200BE7701 /* PickerViewModel.swift */; };
 		BE044F292C6B7D0300BE7701 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE044F282C6B7D0300BE7701 /* PickerView.swift */; };
 		BE044F2B2C6B7DA700BE7701 /* VoteResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE044F2A2C6B7DA700BE7701 /* VoteResultView.swift */; };
+		BE044F312C6B815F00BE7701 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE044F302C6B815F00BE7701 /* TimerView.swift */; };
+		BE044F332C6B816A00BE7701 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE044F322C6B816A00BE7701 /* TimerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		BE044F262C6B7CF200BE7701 /* PickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewModel.swift; sourceTree = "<group>"; };
 		BE044F282C6B7D0300BE7701 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		BE044F2A2C6B7DA700BE7701 /* VoteResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteResultView.swift; sourceTree = "<group>"; };
+		BE044F302C6B815F00BE7701 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		BE044F322C6B816A00BE7701 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,7 @@
 		BE044F182C6B7C4F00BE7701 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				BE044F2C2C6B813600BE7701 /* TimerView */,
 				BE044F252C6B7CE200BE7701 /* Picker */,
 				BE044F202C6B7CA600BE7701 /* StudyTimePicker */,
 				BE044F192C6B7C5A00BE7701 /* Onbording */,
@@ -183,6 +188,15 @@
 				BE044F282C6B7D0300BE7701 /* PickerView.swift */,
 			);
 			path = Picker;
+			sourceTree = "<group>";
+		};
+		BE044F2C2C6B813600BE7701 /* TimerView */ = {
+			isa = PBXGroup;
+			children = (
+				BE044F302C6B815F00BE7701 /* TimerView.swift */,
+				BE044F322C6B816A00BE7701 /* TimerViewModel.swift */,
+			);
+			path = TimerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,8 +339,10 @@
 				BE044F2B2C6B7DA700BE7701 /* VoteResultView.swift in Sources */,
 				BE044EEE2C6B7BEF00BE7701 /* ContentView.swift in Sources */,
 				BE044F292C6B7D0300BE7701 /* PickerView.swift in Sources */,
+				BE044F332C6B816A00BE7701 /* TimerViewModel.swift in Sources */,
 				BE044F272C6B7CF200BE7701 /* PickerViewModel.swift in Sources */,
 				BE044F1F2C6B7C9800BE7701 /* StartView.swift in Sources */,
+				BE044F312C6B815F00BE7701 /* TimerView.swift in Sources */,
 				BE044F1D2C6B7C7F00BE7701 /* OnbordingViewModel.swift in Sources */,
 				BE044EEC2C6B7BEF00BE7701 /* apple_dev_pjApp.swift in Sources */,
 				BE044F1B2C6B7C6A00BE7701 /* OnbordingView.swift in Sources */,
