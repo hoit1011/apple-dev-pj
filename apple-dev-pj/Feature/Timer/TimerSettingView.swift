@@ -9,37 +9,33 @@ struct TimerSettingView: View {
     
     var body: some View {
         NavigationStack{
-            VStack {
-                TitleView()
-                
-                AnimatedImage(url: URL(string: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Alarm%20Clock.png"))
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(height: 200)
-                
-                TimerSettingViewContent()
-                
-                Spacer()
-                    .frame(height: 100)
-                
+            ZStack{
+                VStack {
+                    TitleView()
+                    
+                    AnimatedImage(url: URL(string: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Alarm%20Clock.png"))
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 200)
+                    
+                    TimerSettingViewContent()
+                    
+                    Spacer()
+                        .frame(height: 100)
+                    
+                    NavigationLink(destination: TimerView(), isActive: $navigateToNextView) {
+                        EmptyView()
+                    }
+                }
                 Button(
                     action: {
                         timerViewModel.settingBtnTapped(Freetime: globalState.FreeTime ?? 0, StudyTime: globalState.StudyTime ?? 0)
                         navigateToNextView = true
                     },
                     label: {
-                        Text("공부를 시작하시겠습니까?")
-                            .padding(.horizontal, 20)
-                            .padding(.vertical, 15)
-                            .foregroundColor(.white)
-                            .background(.blue)
-                            .cornerRadius(20)
-                            .font(.system(size: 28, weight: .bold))
+                        CustomButtonView(message: "공부를 시작하시겠습니까?")
                     }
                 )
-                NavigationLink(destination: TimerView(), isActive: $navigateToNextView) {
-                    EmptyView()
-                }
             }
         }
     }
@@ -48,8 +44,8 @@ struct TimerSettingView: View {
 private struct TitleView: View {
     var body: some View {
         Text("오늘의 시간 정보!")
-            .font(.system(size: 40, weight: .bold))
-            .foregroundStyle(.blue)
+            .font(.system(size: 30, weight: .bold))
+            .foregroundStyle(.black)
     }
 }
 
@@ -61,8 +57,8 @@ private struct TimerSettingViewContent: View {
             Text("공부: \(globalState.StudyTime ?? 0)분")
             Text("휴식: \(globalState.FreeTime ?? 0)분 입니다!")
         }
-        .font(.system(size: 40, weight: .bold))
-        .foregroundColor(.blue)
+        .font(.system(size: 26, weight: .bold))
+        .foregroundColor(.black)
     }
 }
 

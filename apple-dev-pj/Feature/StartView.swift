@@ -10,16 +10,13 @@ struct StartView: View {
     
     var body: some View {
         NavigationStack{
-            ZStack{
-                Color(.customBlue)
-                
-                VStack(alignment: .leading){
-                    Text("기분 좋은 하루네요!👋")
-                        .font(.system(size: 27,weight: .bold))
-                        .foregroundStyle(.white)
-                    Text("오늘도 공부하러 가볼까요 ?")
-                        .font(.system(size: 27,weight: .bold))
-                        .foregroundStyle(.white)
+            VStack(alignment: .leading){
+                Text("기분 좋은 하루네요!👋")
+                    .font(.system(size: 27,weight: .bold))
+                    .foregroundStyle(.black)
+                Text("오늘도 공부하러 가볼까요 ?")
+                    .font(.system(size: 27,weight: .bold))
+                    .foregroundStyle(.black)
                 }
                 .padding(.bottom,400)
                 
@@ -29,16 +26,13 @@ struct StartView: View {
                         Text("Next")
                             .padding(.horizontal, 115)
                             .padding(.vertical, 10)
-                            .background(Color.white)
-                            .foregroundStyle(.customBlue)
+                            .background(Color.blue)
+                            .foregroundStyle(.white)
                             .font(.system(size: 22, weight: .bold))
                             .cornerRadius(14)
                             .shadow(radius: 1, x: -1, y: 5)
                     }
                 )
-                .padding(.top, 700)
-            }
-            .ignoresSafeArea()
         }
     }
 }

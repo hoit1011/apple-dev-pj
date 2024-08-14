@@ -11,6 +11,8 @@ struct PickerView: View {
     @EnvironmentObject var pickerViewModel : PickerViewModel
     
     var body: some View {
+        ZStack{
+            VotingView()
             VStack{
                 TitleView()
                 
@@ -29,13 +31,13 @@ struct PickerView: View {
                 
                 Spacer()
                     .frame(height: 90)
-                VotingView()
             }
             .alert("휴식시간을 설정해 주세요",
                    isPresented: $pickerViewModel.isAlertMessage
             ) {
                 Button("확인",role: .cancel) { }
             }
+        }
     }
 }
 

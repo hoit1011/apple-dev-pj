@@ -16,12 +16,12 @@ struct CustomButtonView: View {
     
     var body: some View {
         Text(message)
-            .padding(.horizontal,125)
-            .padding(.vertical,15)
+            .frame(width: 334,height: 55)
             .foregroundColor(.white)
             .background(.blue)
             .cornerRadius(20)
-            .font(.system(size: 20,weight: .bold))
+            .font(.system(size: 27,weight: .bold))
+            .padding(.top,550)
     }
 }
 

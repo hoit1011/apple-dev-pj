@@ -27,20 +27,14 @@ struct VoteResultView: View {
                 
                 Spacer()
                     .frame(height: 80)
-                Button(
-                    action:{globalState.FreeTime = nil;
-                        globalState.StudyTime = nil},
-                    label:{
-                        Text("다시 투표하러 가기")
-                            .padding(.horizontal,60)
-                            .padding(.vertical,15)
-                            .foregroundColor(.white)
-                            .background(.blue)
-                            .cornerRadius(20)
-                            .font(.system(size: 20,weight: .bold))
-                    }
-                )
             }
+            Button(
+                action:{globalState.FreeTime = nil;
+                    globalState.StudyTime = nil},
+                label:{
+                    CustomButtonView(message: "다시 투표하러 가기!")
+                }
+            )
         }
         .ignoresSafeArea()
     }

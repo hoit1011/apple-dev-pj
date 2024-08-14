@@ -17,29 +17,31 @@ import SDWebImageSwiftUI
 struct StudyTimePickerView: View {
     @EnvironmentObject private var studyTimePickerViewModel: StudyTimePickerViewModel
     var body: some View{
-        VStack{
-            TitleView()
-            
-            Spacer()
-                .frame(height: 30)
-            
-            HStack{
-                StudyTimePickerContentView()
+        ZStack{
+            VotingView()
+            VStack{
+                TitleView()
+                
+                Spacer()
+                    .frame(height: 30)
+                
+                HStack{
+                    StudyTimePickerContentView()
+                }
+                
+                AnimatedImage(url:URL(string:"https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Thinking%20Face.png"))
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 120)
+                    .padding(.top,70)
+                
+                Spacer()
+                    .frame(height: 90)
+            }.alert("공부시간을 설정해 주세요",
+                    isPresented: $studyTimePickerViewModel.isAlertMessage
+            ) {
+                Button("확인",role: .cancel) { }
             }
-            
-            AnimatedImage(url:URL(string:"https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Thinking%20Face.png"))
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 120)
-                .padding(.top,70)
-            
-            Spacer()
-                .frame(height: 90)
-                VotingView()
-        }.alert("공부시간을 설정해 주세요",
-        isPresented: $studyTimePickerViewModel.isAlertMessage
-        ) {
-            Button("확인",role: .cancel) { }
         }
     }
 }
@@ -104,13 +106,7 @@ private struct VotingView: View {
                 globalState.StudyTime = studyTimePickerViewModel.selectedButtonIndex
             },
             label:{
-                Text("투표하기")
-                    .padding(.horizontal,125)
-                    .padding(.vertical,15)
-                    .foregroundColor(.white)
-                    .background(.blue)
-                    .cornerRadius(20)
-                    .font(.system(size: 20,weight: .bold))
+                CustomButtonView(message: "투표하기")
             }
         )
     }

@@ -15,7 +15,7 @@ struct NoVoteTimerView: View {
             AnimatedImage(url:URL(string:"https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Cross%20Mark.png"))
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(height: 170)
+                .frame(height: 140)
             
             Spacer()
                 .frame(height: 50)
@@ -30,8 +30,8 @@ struct NoVoteTimerView: View {
                 },
                 label: {
                     Text("투표하러 가기!")
-                        .padding(.horizontal,80)
-                        .padding(.vertical,15)
+                        .padding(.horizontal,60)
+                        .padding(.vertical,10)
                         .foregroundColor(.white)
                         .background(.blue)
                         .cornerRadius(20)
@@ -49,8 +49,8 @@ private struct NoVoteTimerContentView: View{
             Text("정해지지 않았어요.")
             Text("시간을 투표해주세요!")
         }
-        .font(.system(size: 35,weight: .bold))
-        .foregroundColor(.blue)
+        .font(.system(size: 30,weight: .bold))
+        .foregroundColor(.black)
     }
 }
 #Preview {

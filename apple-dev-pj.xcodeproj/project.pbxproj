@@ -29,6 +29,7 @@
 		BE3B94AF2C6BDA6A004E8BD7 /* ComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3B94AE2C6BDA6A004E8BD7 /* ComponentView.swift */; };
 		BE3B94B42C6BE007004E8BD7 /* NoVoteTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3B94B32C6BE007004E8BD7 /* NoVoteTimerView.swift */; };
 		BE3B94B62C6BE3CE004E8BD7 /* TimerSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3B94B52C6BE3CE004E8BD7 /* TimerSettingView.swift */; };
+		BEBF3D482C6C42E0008C5133 /* MemoVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF3D472C6C42E0008C5133 /* MemoVIewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		BE3B94AE2C6BDA6A004E8BD7 /* ComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentView.swift; sourceTree = "<group>"; };
 		BE3B94B32C6BE007004E8BD7 /* NoVoteTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoVoteTimerView.swift; sourceTree = "<group>"; };
 		BE3B94B52C6BE3CE004E8BD7 /* TimerSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSettingView.swift; sourceTree = "<group>"; };
+		BEBF3D472C6C42E0008C5133 /* MemoVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoVIewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 		BE044F182C6B7C4F00BE7701 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				BEBF3D462C6C42D0008C5133 /* Memo */,
 				BE3B94B22C6BDFBF004E8BD7 /* NoVoteTimer */,
 				BE044F2C2C6B813600BE7701 /* Timer */,
 				BE044F252C6B7CE200BE7701 /* Picker */,
@@ -233,6 +236,14 @@
 				BE3B94B32C6BE007004E8BD7 /* NoVoteTimerView.swift */,
 			);
 			path = NoVoteTimer;
+			sourceTree = "<group>";
+		};
+		BEBF3D462C6C42D0008C5133 /* Memo */ = {
+			isa = PBXGroup;
+			children = (
+				BEBF3D472C6C42E0008C5133 /* MemoVIewModel.swift */,
+			);
+			path = Memo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,6 +385,7 @@
 				BE044F242C6B7CD200BE7701 /* StudyTimePickerViewModel.swift in Sources */,
 				BE044F2B2C6B7DA700BE7701 /* VoteResultView.swift in Sources */,
 				BE044EEE2C6B7BEF00BE7701 /* ContentView.swift in Sources */,
+				BEBF3D482C6C42E0008C5133 /* MemoVIewModel.swift in Sources */,
 				BE044F292C6B7D0300BE7701 /* PickerView.swift in Sources */,
 				BE044F332C6B816A00BE7701 /* TimerViewModel.swift in Sources */,
 				BE044F272C6B7CF200BE7701 /* PickerViewModel.swift in Sources */,
