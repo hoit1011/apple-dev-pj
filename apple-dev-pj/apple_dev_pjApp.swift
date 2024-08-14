@@ -10,9 +10,12 @@ import SwiftUI
 @main
 struct apple_dev_pjApp: App {
     @StateObject var globalState = GlobalState()
+    @StateObject var timerViewModel = TimerViewModel()
     var body: some Scene {
         WindowGroup {
             OnbordingView()
+                .environmentObject(globalState)
+                .environmentObject(timerViewModel)
         }
     }
 }

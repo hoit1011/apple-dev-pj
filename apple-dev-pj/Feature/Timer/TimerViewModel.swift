@@ -6,25 +6,29 @@ class TimerViewModel: ObservableObject {
     @Published var timer: Timer?
     @Published var timeRemaining: Int
     @Published var freeTimeRemaining: Int
+    @Published var shouldDismiss: Bool
     
     init(
         isStudyTime: Bool = true,
         timer: Timer? = nil,
         time: Time = .init(minutes: 0, seconds: 0),
         timeRemaining: Int = 0,
-        freeTimeRemaining: Int = 0
+        freeTimeRemaining: Int = 0,
+        shouldDismiss: Bool = false
     ) {
         self.isStudyTime = isStudyTime
         self.timer = timer
         self.time = time
         self.timeRemaining = timeRemaining
         self.freeTimeRemaining = freeTimeRemaining
+        self.shouldDismiss = shouldDismiss
     }
     
     func settingBtnTapped(Freetime: Int, StudyTime: Int) {
         self.isStudyTime = true
         self.timeRemaining = StudyTime
         self.freeTimeRemaining = Freetime
+        self.shouldDismiss = false
         
         print("프리타임:\(Freetime)")
         print("스터디타임:\(StudyTime)")
@@ -83,5 +87,8 @@ class TimerViewModel: ObservableObject {
         timer?.invalidate()
         timer = nil
         print("프리 타임 타이머 종료!")
+        
+        self.shouldDismiss = true
+        
     }
 }

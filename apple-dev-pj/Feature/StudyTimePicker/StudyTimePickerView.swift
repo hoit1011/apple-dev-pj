@@ -17,7 +17,7 @@ import SDWebImageSwiftUI
 struct StudyTimePickerView: View {
     @EnvironmentObject private var studyTimePickerViewModel: StudyTimePickerViewModel
     var body: some View{
-        ZStack{
+        ZStack(alignment:.bottom){
             VotingView()
             VStack{
                 TitleView()

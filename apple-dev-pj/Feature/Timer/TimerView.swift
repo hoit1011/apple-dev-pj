@@ -2,9 +2,17 @@ import SwiftUI
 
 struct TimerView: View {
     @EnvironmentObject private var timerViewModel: TimerViewModel
-    
+    @Environment(\.dismiss) private var dismiss
     var body: some View {
-        ZStack{
+        ZStack(alignment:.bottom){
+            Button(
+                action:{
+                    
+                },
+                label: {
+                    CustomButtonView(message: "메모하기")
+                }
+            )
             VStack {
                 TitleView()
                 
@@ -18,15 +26,19 @@ struct TimerView: View {
                 
                 TimerMemoView()
                 Spacer()
-                    .frame(height: 50)
+                    .frame(height: 100)
             }
-            CustomButtonView(message: "메모하기")
         }
         .onAppear {
             timerViewModel.startTimer()
         }
-        .toolbar(.hidden, for:.tabBar)
+//        .toolbar(.hidden, for:.tabBar)
         .navigationBarBackButtonHidden()
+        .onChange(of: timerViewModel.shouldDismiss) { shouldDismiss in
+            if shouldDismiss {
+                dismiss()
+            }
+        }
     }
 }
 
@@ -46,14 +58,14 @@ private struct TimerContentView: View {
         ZStack {
             Circle()
                 .frame(width: 250)
-                .foregroundColor(.blue)
+                .foregroundColor(timerViewModel.isStudyTime ? .blue : .customMint)
             Circle()
                 .frame(width: 230)
                 .foregroundColor(.white)
             Text(timerViewModel.isStudyTime ? timerViewModel.formatTime(timeRemaining: timerViewModel.timeRemaining):
                     timerViewModel.formatTime(timeRemaining: timerViewModel.freeTimeRemaining))
                 .font(.system(size: 50, weight: .bold))
-                .foregroundColor(.blue)
+                .foregroundColor(timerViewModel.isStudyTime ? .blue : .customMint)
         }
     }
 }

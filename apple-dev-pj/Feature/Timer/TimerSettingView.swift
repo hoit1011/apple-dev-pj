@@ -9,7 +9,7 @@ struct TimerSettingView: View {
     
     var body: some View {
         NavigationStack{
-            ZStack{
+            ZStack(alignment:.bottom){
                 VStack {
                     TitleView()
                     

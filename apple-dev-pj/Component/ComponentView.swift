@@ -15,13 +15,14 @@ struct CustomButtonView: View {
     }
     
     var body: some View {
-        Text(message)
-            .frame(width: 334,height: 55)
-            .foregroundColor(.white)
-            .background(.blue)
-            .cornerRadius(20)
-            .font(.system(size: 27,weight: .bold))
-            .padding(.top,550)
+        VStack{
+            Text(message)
+                .frame(width: 334,height: 55)
+                .foregroundColor(.white)
+                .background(.blue)
+                .cornerRadius(20)
+                .font(.system(size: 27,weight: .bold))
+        }
     }
 }
 

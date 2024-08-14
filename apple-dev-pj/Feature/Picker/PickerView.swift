@@ -11,7 +11,7 @@ struct PickerView: View {
     @EnvironmentObject var pickerViewModel : PickerViewModel
     
     var body: some View {
-        ZStack{
+        ZStack(alignment: .bottom) {
             VotingView()
             VStack{
                 TitleView()

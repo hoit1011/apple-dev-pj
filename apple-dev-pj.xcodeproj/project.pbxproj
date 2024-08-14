@@ -30,6 +30,8 @@
 		BE3B94B42C6BE007004E8BD7 /* NoVoteTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3B94B32C6BE007004E8BD7 /* NoVoteTimerView.swift */; };
 		BE3B94B62C6BE3CE004E8BD7 /* TimerSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3B94B52C6BE3CE004E8BD7 /* TimerSettingView.swift */; };
 		BEBF3D482C6C42E0008C5133 /* MemoVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF3D472C6C42E0008C5133 /* MemoVIewModel.swift */; };
+		BEBF3D4A2C6C6728008C5133 /* MemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF3D492C6C6728008C5133 /* MemoView.swift */; };
+		BEBF3D4C2C6C693D008C5133 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF3D4B2C6C693D008C5133 /* Memo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		BE3B94B32C6BE007004E8BD7 /* NoVoteTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoVoteTimerView.swift; sourceTree = "<group>"; };
 		BE3B94B52C6BE3CE004E8BD7 /* TimerSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSettingView.swift; sourceTree = "<group>"; };
 		BEBF3D472C6C42E0008C5133 /* MemoVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoVIewModel.swift; sourceTree = "<group>"; };
+		BEBF3D492C6C6728008C5133 /* MemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoView.swift; sourceTree = "<group>"; };
+		BEBF3D4B2C6C693D008C5133 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				BE3B94AB2C6BD4C1004E8BD7 /* Time.swift */,
+				BEBF3D4B2C6C693D008C5133 /* Memo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				BEBF3D472C6C42E0008C5133 /* MemoVIewModel.swift */,
+				BEBF3D492C6C6728008C5133 /* MemoView.swift */,
 			);
 			path = Memo;
 			sourceTree = "<group>";
@@ -392,6 +398,8 @@
 				BE3B94AC2C6BD4C1004E8BD7 /* Time.swift in Sources */,
 				BE044F1F2C6B7C9800BE7701 /* StartView.swift in Sources */,
 				BE044F312C6B815F00BE7701 /* TimerView.swift in Sources */,
+				BEBF3D4A2C6C6728008C5133 /* MemoView.swift in Sources */,
+				BEBF3D4C2C6C693D008C5133 /* Memo.swift in Sources */,
 				BE044F1D2C6B7C7F00BE7701 /* OnbordingViewModel.swift in Sources */,
 				BE3B94AF2C6BDA6A004E8BD7 /* ComponentView.swift in Sources */,
 				BE3B94B62C6BE3CE004E8BD7 /* TimerSettingView.swift in Sources */,

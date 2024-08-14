@@ -10,7 +10,7 @@ import SDWebImageSwiftUI
 struct VoteResultView: View {
     @EnvironmentObject private var globalState: GlobalState
     var body: some View {
-        ZStack{
+        ZStack(alignment:.bottom){
             VStack{
                 TitleView()
                 
