@@ -2,37 +2,58 @@ import SwiftUI
 
 struct TimerView: View {
     @EnvironmentObject private var timerViewModel: TimerViewModel
+    @EnvironmentObject private var memoViewModel: MemoVIewModel
     @Environment(\.dismiss) private var dismiss
+    
+    @State private var memoText: String = ""
+    @State private var isShowingMemoView = false
+    
     var body: some View {
         ZStack(alignment:.bottom){
             Button(
                 action:{
-                    
+                    memoViewModel.addMemo(memoText)
                 },
                 label: {
                     CustomButtonView(message: "메모하기")
                 }
             )
             VStack {
+                Button(
+                    action:{
+                        isShowingMemoView = true
+                        memoText = ""
+                    },
+                    label: {
+                        Image(systemName: "book.pages")
+                            .resizable()
+                            .frame(width: 40, height: 50)
+                            .padding(.leading,280)
+                            .padding(.bottom,10)
+                            .foregroundColor(.black)
+                    }
+                )
                 TitleView()
                 
-                Spacer()
-                    .frame(height: 20)
                 
                 TimerContentView()
                 
                 Spacer()
-                    .frame(height: 30)
+                    .frame(height: 60)
                 
-                TimerMemoView()
+                TimerMemoView(memo: $memoText)
                 Spacer()
-                    .frame(height: 100)
+                    .frame(height: 20)
             }
+            .padding(.bottom,70)
         }
         .onAppear {
             timerViewModel.startTimer()
         }
-//        .toolbar(.hidden, for:.tabBar)
+        .sheet(isPresented: $isShowingMemoView) {
+            MemoView()
+        }
+        .toolbar(.hidden, for:.tabBar)
         .navigationBarBackButtonHidden()
         .onChange(of: timerViewModel.shouldDismiss) { shouldDismiss in
             if shouldDismiss {
@@ -71,7 +92,7 @@ private struct TimerContentView: View {
 }
 
 private struct TimerMemoView: View {
-    @State var memo: String = ""
+    @Binding var memo: String
     fileprivate var body: some View{
             TextField("메모내용...",text: $memo)
                 .padding()

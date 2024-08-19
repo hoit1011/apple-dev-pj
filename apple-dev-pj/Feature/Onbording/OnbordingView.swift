@@ -5,6 +5,7 @@ struct OnbordingView: View {
     @State var selection: Int = 0
     @EnvironmentObject var pickerViewModel: PickerViewModel
     @EnvironmentObject var globalState: GlobalState
+    @EnvironmentObject var memoViewModel: MemoVIewModel
     
     var body: some View {
         TabView(selection: $selection) {
@@ -30,7 +31,6 @@ struct OnbordingView: View {
                     }
                     .tag(2)
             }
-            
             if globalState.FreeTime == nil || globalState.StudyTime == nil {
                 NoVoteTimerView(selection: $selection)
                     .tabItem {
@@ -40,6 +40,7 @@ struct OnbordingView: View {
             } else {
                 TimerSettingView()
                     .environmentObject(globalState)
+                    .environmentObject(memoViewModel)
                     .tabItem {
                         Image(systemName: "timer")
                     }
@@ -63,4 +64,5 @@ struct OnbordingView: View {
         .environmentObject(StudyTimePickerViewModel())
         .environmentObject(GlobalState())
         .environmentObject(TimerViewModel())
+        .environmentObject(MemoVIewModel())
 }

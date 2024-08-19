@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BE044EEC2C6B7BEF00BE7701 /* apple_dev_pjApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE044EEB2C6B7BEF00BE7701 /* apple_dev_pjApp.swift */; };
-		BE044EEE2C6B7BEF00BE7701 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE044EED2C6B7BEF00BE7701 /* ContentView.swift */; };
 		BE044EF02C6B7BEF00BE7701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE044EEF2C6B7BEF00BE7701 /* Assets.xcassets */; };
 		BE044EF32C6B7BEF00BE7701 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE044EF22C6B7BEF00BE7701 /* Preview Assets.xcassets */; };
 		BE044EFD2C6B7BF000BE7701 /* apple_dev_pjTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE044EFC2C6B7BF000BE7701 /* apple_dev_pjTests.swift */; };
@@ -31,7 +30,6 @@
 		BE3B94B62C6BE3CE004E8BD7 /* TimerSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3B94B52C6BE3CE004E8BD7 /* TimerSettingView.swift */; };
 		BEBF3D482C6C42E0008C5133 /* MemoVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF3D472C6C42E0008C5133 /* MemoVIewModel.swift */; };
 		BEBF3D4A2C6C6728008C5133 /* MemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF3D492C6C6728008C5133 /* MemoView.swift */; };
-		BEBF3D4C2C6C693D008C5133 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF3D4B2C6C693D008C5133 /* Memo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +52,6 @@
 /* Begin PBXFileReference section */
 		BE044EE82C6B7BEF00BE7701 /* apple-dev-pj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "apple-dev-pj.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE044EEB2C6B7BEF00BE7701 /* apple_dev_pjApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apple_dev_pjApp.swift; sourceTree = "<group>"; };
-		BE044EED2C6B7BEF00BE7701 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BE044EEF2C6B7BEF00BE7701 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE044EF22C6B7BEF00BE7701 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BE044EF82C6B7BF000BE7701 /* apple-dev-pjTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "apple-dev-pjTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,7 +75,6 @@
 		BE3B94B52C6BE3CE004E8BD7 /* TimerSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSettingView.swift; sourceTree = "<group>"; };
 		BEBF3D472C6C42E0008C5133 /* MemoVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoVIewModel.swift; sourceTree = "<group>"; };
 		BEBF3D492C6C6728008C5133 /* MemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoView.swift; sourceTree = "<group>"; };
-		BEBF3D4B2C6C693D008C5133 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +130,6 @@
 				BE3B94AA2C6BD4B7004E8BD7 /* Model */,
 				BE044F182C6B7C4F00BE7701 /* Feature */,
 				BE044EEB2C6B7BEF00BE7701 /* apple_dev_pjApp.swift */,
-				BE044EED2C6B7BEF00BE7701 /* ContentView.swift */,
 				BE044EEF2C6B7BEF00BE7701 /* Assets.xcassets */,
 				BE044EF12C6B7BEF00BE7701 /* Preview Content */,
 			);
@@ -222,7 +217,6 @@
 			isa = PBXGroup;
 			children = (
 				BE3B94AB2C6BD4C1004E8BD7 /* Time.swift */,
-				BEBF3D4B2C6C693D008C5133 /* Memo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -390,7 +384,6 @@
 			files = (
 				BE044F242C6B7CD200BE7701 /* StudyTimePickerViewModel.swift in Sources */,
 				BE044F2B2C6B7DA700BE7701 /* VoteResultView.swift in Sources */,
-				BE044EEE2C6B7BEF00BE7701 /* ContentView.swift in Sources */,
 				BEBF3D482C6C42E0008C5133 /* MemoVIewModel.swift in Sources */,
 				BE044F292C6B7D0300BE7701 /* PickerView.swift in Sources */,
 				BE044F332C6B816A00BE7701 /* TimerViewModel.swift in Sources */,
@@ -399,7 +392,6 @@
 				BE044F1F2C6B7C9800BE7701 /* StartView.swift in Sources */,
 				BE044F312C6B815F00BE7701 /* TimerView.swift in Sources */,
 				BEBF3D4A2C6C6728008C5133 /* MemoView.swift in Sources */,
-				BEBF3D4C2C6C693D008C5133 /* Memo.swift in Sources */,
 				BE044F1D2C6B7C7F00BE7701 /* OnbordingViewModel.swift in Sources */,
 				BE3B94AF2C6BDA6A004E8BD7 /* ComponentView.swift in Sources */,
 				BE3B94B62C6BE3CE004E8BD7 /* TimerSettingView.swift in Sources */,

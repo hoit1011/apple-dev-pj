@@ -8,11 +8,20 @@
 import Foundation
 
 class MemoVIewModel: ObservableObject {
-    @Published var memo : [Memo]
+    @Published var memos : [String]
     
-    init(memo: [Memo]) {
-        self.memo = memo
+    init(memos: [String] = []) {
+        self.memos = memos
     }
     
+    func addMemo(_ memo: String) {
+        guard !memo.isEmpty else { return }
+        memos.append(memo)
+    }
     
+    func deleteMemo(_ memo: String) {
+        if let index = memos.firstIndex(of: memo) {
+            memos.remove(at: index)
+        }
+    }
 }
