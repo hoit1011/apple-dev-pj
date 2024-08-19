@@ -13,6 +13,7 @@ struct TimerView: View {
             Button(
                 action:{
                     memoViewModel.addMemo(memoText)
+                    memoText = ""
                 },
                 label: {
                     CustomButtonView(message: "메모하기")
@@ -22,7 +23,6 @@ struct TimerView: View {
                 Button(
                     action:{
                         isShowingMemoView = true
-                        memoText = ""
                     },
                     label: {
                         Image(systemName: "book.pages")

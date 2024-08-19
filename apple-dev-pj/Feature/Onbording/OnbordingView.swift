@@ -47,7 +47,8 @@ struct OnbordingView: View {
                     .tag(3)
             }
             
-            Text("v")
+            MemoView()
+                .environmentObject(memoViewModel)
                 .tabItem {
                     Image(systemName: "highlighter")
                 }
